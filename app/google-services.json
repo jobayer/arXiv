@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "420661917391",
+    "firebase_url": "https://arxiv-android.firebaseio.com",
+    "project_id": "arxiv-android",
+    "storage_bucket": "arxiv-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:420661917391:android:b6147856730a62c171e9ba",
+        "android_client_info": {
+          "package_name": "com.jobayr.arxiv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "420661917391-rqv11m16uu7abj92ctvgi66pu1i9b6e4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jobayr.arxiv",
+            "certificate_hash": "bce1e4a9ed6fe3d032cfcd2577fe6d0ae2e7fe32"
+          }
+        },
+        {
+          "client_id": "420661917391-04oal02acd3m1uut9u2g78qdhvuhf4et.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3ODYsod-jHOLX6nsmE47gpPCWJehCwxM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "420661917391-04oal02acd3m1uut9u2g78qdhvuhf4et.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
