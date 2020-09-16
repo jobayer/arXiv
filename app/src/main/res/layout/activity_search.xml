@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="12dp"
+    tools:context=".activities.SearchActivity">
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/settingsSearchBtnGroup"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:gravity="center"
+        android:weightSum="2"
+        app:checkedButton="@id/settingsSearchBtnSimple"
+        app:selectionRequired="true"
+        app:singleSelection="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/settingsSearchBtnSimple"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/simple"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            app:backgroundTint="@color/colorBlack" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/settingsSearchBtnAdvanced"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/advanced"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            app:backgroundTint="@color/colorWhite" />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <LinearLayout
+        android:id="@+id/searchSimpleLayoutContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="12dp"
+            app:cardBackgroundColor="@color/colorGray"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="1dp">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/searchSearchKeywordInput"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="@string/search_keyword"
+                android:inputType="textShortMessage"
+                android:maxLines="1"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/searchSearchInText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/search_in"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/searchSimpleSearchFIEverywhere"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/everywhere" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/searchSimpleSearchFITitle"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/title" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/searchSimpleSearchFIComment"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/comment" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/searchSimpleSearchFIAbstract"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/text_abstract" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/searchSimpleSearchFIAuthor"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/author" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/searchSimpleSearchFIJournalRef"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/journal_reference" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/searchSimpleSearchFISubCat"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/subject_category" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/searchSimpleSearchBtn"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="32dp"
+            android:enabled="true"
+            android:text="@string/search" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/searchAdvancedLayoutContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+    </LinearLayout>
+
+</LinearLayout>
